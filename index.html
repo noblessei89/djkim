@@ -113,6 +113,45 @@
             font-size: 1rem;
         }
 
+        /* --- 위치 정보 섹션 스타일 (새로 추가됨) --- */
+        .location-box {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid var(--sidebar-border);
+        }
+
+        .location-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--light-text);
+            margin-bottom: 10px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .location-value {
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.95rem;
+            color: var(--text-color);
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .location-value i {
+            color: var(--accent-color);
+            margin-right: 12px;
+            margin-top: 3px; /* 아이콘 위치 미세 조정 */
+        }
+
+        .location-sub {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--light-text);
+            font-weight: 400;
+            margin-top: 4px;
+        }
+
         /* --- 오른쪽 메인 컨텐츠 --- */
         main {
             margin-left: var(--sidebar-width);
@@ -278,12 +317,12 @@
 
     <!-- 왼쪽 사이드바: 프로필 정보 -->
     <aside>
-        <img src="profile.jpg" alt="Dongjoo Kim" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 30px;">
-        <!-- <div class="profile-placeholder"> -->
+        <div class="profile-placeholder">
             <i class="fas fa-user"></i>
         </div>
         <!-- 추후 사진 추가 시 아래 코드를 사용하고 위 placeholder를 지우세요 -->
-        
+        <!-- <img src="profile.jpg" alt="Dongjoo Kim" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 30px;"> -->
+
         <h1>Dongjoo Kim</h1>
         <div class="title">
             Ph.D. Student<br>
@@ -295,6 +334,18 @@
             <a href="mailto:djkim@tamu.edu"><i class="fas fa-envelope"></i> djkim@tamu.edu</a>
             <a href="mailto:dongjoo_kim@seas.harvard.edu"><i class="fas fa-university"></i> dongjoo_kim@seas.harvard.edu</a>
             <a href="https://linkedin.com/in/djkimpower" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/djkimpower</a>
+        </div>
+
+        <!-- 현재 위치 섹션 -->
+        <div class="location-box">
+            <div class="location-label">Current Location</div>
+            <div class="location-value">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    SEC Complex
+                    <span class="location-sub">Texas A&M University</span>
+                </div>
+            </div>
         </div>
     </aside>
 
@@ -343,7 +394,7 @@
 
             <div class="item">
                 <h3>National Renewable Energy Laboratory (NREL)</h3>
-                <span class="meta">May 2025 - Aug 2025 | Remote</span>
+                <span class="meta">May 2025 - Aug 2025 | Golden, CO</span>
                 <p><strong>Research Intern</strong></p>
                 <p>Research on supporting rapid vehicle electrification with the least impacts, while improving energy resilience.</p>
             </div>
